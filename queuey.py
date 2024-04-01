@@ -41,6 +41,7 @@ class Queuey:
     def clear(self) -> None:
         """ Removes all items from the queue """
         self.q = []
+        self.size = 0
 
 def main():
     q = Queuey(float)
@@ -75,6 +76,8 @@ def main():
     print(f"Expected: 17.21, got: {q.dequeue()}")
     print(f"Expected: None, got: {q.dequeue()}")
 
+    q.enqueue(17.21)
+    q.enqueue(17.21)
     q.clear()
     print(f"Expected: 0, got: {q.length()}")
 
